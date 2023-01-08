@@ -16,8 +16,18 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reactions: {
-            
+        reactions: [
+            reactionSchema
+        ],
+    },
+    {
+        toJSON: {
+            virtuals: true,
         },
+        id: false,
     }
-)
+);
+
+const Thought = model('Thought', thoughtSchema);
+
+module.exports = Thought;
