@@ -30,4 +30,4 @@ Mongoose
 
 * [LinkedIn](https://www.linkedin.com/in/katie-mandovi-931354246/)
 * [GitHub](https://github.com/kmanoovi)
-* [Video]()
+* [Video](https://drive.google.com/file/d/103eiKjRYQmHogIkjzBnD9TPDZuZJF2B6/view)

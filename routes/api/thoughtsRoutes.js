@@ -5,7 +5,7 @@ const {
   postThought,
   updateThought,
   deleteThought,
-} = require('../controllers/userController.js');
+} = require('../../controllers/thoughtsControllers.js');
 
 router.route('/').get(getThought).post(postThought).put(updateThought);
 

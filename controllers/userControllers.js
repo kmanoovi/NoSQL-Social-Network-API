@@ -30,7 +30,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
-          : Uswe.deleteMany({ _id: { $in: user } })
+          : User.deleteMany({ _id: { $in: user } })
       )
       .then(() => res.json({ message: 'Users deleted!' }))
       .catch((err) => res.status(500).json(err));
@@ -48,5 +48,19 @@ module.exports = {
           : res.json(course)
       )
       .catch((err) => res.status(500).json(err));
+  },
+
+  postUser(req, res) {
+    User.post(
+      {_id: req.params.userId},
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
+    .then((course) =>
+    !course
+      ? res.status(404).json({ message: 'No user with this id!' })
+      : res.json(course)
+  )
+  .catch((err) => res.status(500).json(err));
   },
 };

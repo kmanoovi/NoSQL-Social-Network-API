@@ -5,9 +5,12 @@ const {
   postUser,
   updateUser,
   deleteUser,
-} = require('../controllers/userController.js');
+} = require('../../controllers/userControllers.js');
 
-router.route('/').get(getUsers).post(postUser).put(updateUser);
+router.route('/')
+.get(getUsers)
+.post(postUser)
+.put(updateUser);
 
 router.route('/:userId').get(getSingleUser).delete(deleteUser);
 
